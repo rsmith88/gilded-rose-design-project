@@ -7,7 +7,7 @@ class GildedRose
   attr_reader :generic_items
 
   def update_all
-    update_aged_cheese if
+    update_aged_cheese
     update_backstage_passes
     update_generic_items
   end
