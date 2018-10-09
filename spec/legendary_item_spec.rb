@@ -1,0 +1,2 @@
+require 'legendary_item'
+#
