@@ -4,8 +4,6 @@ class ConjuredItem
     @conjured_items = items.select { |i| i.name == "Conjured item" }
   end
 
-  attr_reader :update_conjured_items
-
   def update_conjured_items
     @conjured_items.each do | item |
       item.quality -= 2 if item.sell_in > 0

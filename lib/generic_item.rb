@@ -6,8 +6,6 @@ class GenericItem
     @generic_items = items.select { |i| is_generic?(i) }
   end
 
-  attr_reader :update_generic_items
-
   def update_generic_items
     @generic_items.each do | item |
       item.quality -= 1 if item.sell_in > 0

@@ -1,5 +1,4 @@
 require 'item'
-require 'gilded_rose'
 
 class SpecialItem
 
@@ -7,8 +6,6 @@ class SpecialItem
     @cheeses = items.select { |i| i.name == "Aged Brie" }
     @backstage_passes = items.select { |i| i.name.include? "Backstage passes" }
   end
-
-  attr_reader :updated_special_items
 
   def update_special_items
     update_cheeses
