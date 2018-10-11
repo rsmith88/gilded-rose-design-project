@@ -1,36 +1,6 @@
 require 'special_item'
 
 describe SpecialItem do
-  describe "#update_cheeses" do
-    context 'before sell_in' do
-
-      it 'raises quality by one after a day' do
-        item = Item.new("Aged Brie", 1, 0)
-        SpecialItem.new([item]).update_cheeses
-        expect(item.quality).to eq(1)
-      end
-
-      it 'never raises quality beyond 50' do
-        item = Item.new("Aged Brie", 1, 50)
-        SpecialItem.new([item]).update_cheeses
-        expect(item.quality).to eq(50)
-      end
-    end
-
-    context 'after sell_in' do
-      it 'raises quality by two after a day' do
-        item = Item.new("Aged Brie", 0, 0)
-        SpecialItem.new([item]).update_cheeses
-        expect(item.quality).to eq(2)
-      end
-
-      it 'only raises quality to 50 when quality is at 49' do
-        item = Item.new("Aged Brie", 0, 49)
-        SpecialItem.new([item]).update_cheeses
-        expect(item.quality).to eq(50)
-      end
-    end
-
   describe '#update_backstage_passes' do
     context 'when sell_in is greater than 10' do
       it 'increases quality by one after each day' do
@@ -45,7 +15,6 @@ describe SpecialItem do
         expect(item.quality).to eq(50)
       end
     end
-  end
 
     context 'when sell_in is less than or equal to 10 but more than 5' do
       it 'increases quality by two after each day' do

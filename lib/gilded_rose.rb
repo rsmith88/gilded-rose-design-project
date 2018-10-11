@@ -9,6 +9,7 @@ class GildedRose
   def update_all
     @items.each do |item|
       SpecialItem.new([item]).update_special_items
+      AgedCheese.new([item]).update_aged_cheeses
       GenericItem.new([item]).update_generic_items
       ConjuredItem.new([item]).update_conjured_items
       LegendaryItem.new([item]).update_legendary_items
