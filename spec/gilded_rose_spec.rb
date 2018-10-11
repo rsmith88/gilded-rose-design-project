@@ -44,6 +44,13 @@ describe GildedRose do
       expect(item.quality).to eq 8
     end
 
+    it 'updates magic beans' do
+      item = Item.new("Magic bean", 10, 10)
+      GildedRose.new([item]).update_all
+      expect(item.sell_in).to eq 9
+      expect(item.quality).to be_between(10, 11).inclusive
+    end
+
     it 'updates legendary items' do
       item = Item.new("Sulfuras", 0, 80)
       GildedRose.new([item]).update_all

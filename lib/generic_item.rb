@@ -14,9 +14,11 @@ class GenericItem
  def is_generic?(item)
    !(item.name == "Aged Brie" ||
      item.name == "Aged Chedder" ||
-     item.name.include?("ulfuras") ||
+     item.name == "Sulfuras" ||
+     item.name == "Yulfuras" ||
      item.name == "Conjured item" ||
      item.name == "Ultra conjured item" ||
+     item.name == "Magic bean" ||
      item.name.include?("Backstage passes"))
  end
 

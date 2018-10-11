@@ -13,6 +13,7 @@ class GildedRose
       GenericItem.new([item]).update_generic_items
       ConjuredItem.new([item]).update_conjured_items
       LegendaryItem.new([item]).update_legendary_items
+      MagicBean.new([item]).update_magic_beans
     end
   end
 
