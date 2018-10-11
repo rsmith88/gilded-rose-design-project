@@ -17,7 +17,7 @@ describe ConjuredItem do
       end
     end
 
-    context 'double conjured items' do
+    context 'ultra conjured items' do
       it 'lowers quality by three after one day before sell in date' do
         item = Item.new("Ultra conjured item", 1, 10)
         ConjuredItem.new([item]).update_conjured_items

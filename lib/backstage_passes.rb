@@ -1,6 +1,6 @@
-require 'item'
+require 'update_methods'
 
-class BackstagePasses
+class BackstagePasses < UpdateMethods
 
   def initialize(items)
     @backstage_passes = items.select { |i| i.name.include? "Backstage passes" }
@@ -17,9 +17,4 @@ class BackstagePasses
      end
   end
 
-  def limit_quality(item)
-    item.quality = 0 if item.quality <= 0
-    item.quality = 50 if item.quality > 50
-    nil
-  end
 end
