@@ -1,13 +1,9 @@
 require 'item'
 
-class SpecialItem
+class BackstagePasses
 
   def initialize(items)
     @backstage_passes = items.select { |i| i.name.include? "Backstage passes" }
-  end
-
-  def update_special_items
-    update_backstage_passes
   end
 
   def update_backstage_passes

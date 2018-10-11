@@ -8,7 +8,7 @@ class GildedRose
 
   def update_all
     @items.each do |item|
-      SpecialItem.new([item]).update_special_items
+      BackstagePasses.new([item]).update_backstage_passes
       AgedCheese.new([item]).update_aged_cheeses
       GenericItem.new([item]).update_generic_items
       ConjuredItem.new([item]).update_conjured_items
