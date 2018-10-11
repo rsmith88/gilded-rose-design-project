@@ -1,6 +1,7 @@
 require 'update_methods'
 
-class ConjuredItem < UpdateMethods
+class ConjuredItem
+  include UpdateMethods
 
   def initialize(items)
     @conjured_items = items.select { |i| i.name == "Conjured item" }

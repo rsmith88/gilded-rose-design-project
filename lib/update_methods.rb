@@ -1,4 +1,4 @@
-class UpdateMethods
+module UpdateMethods
 
 def update(array, pre_sell_in, post_sell_in)
   array.each do | item |

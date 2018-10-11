@@ -1,6 +1,7 @@
 require 'update_methods'
 
-class AgedCheese < UpdateMethods
+class AgedCheese
+  include UpdateMethods
 
   def initialize(items)
     @aged_brie = items.select { |i| i.name == "Aged Brie" }

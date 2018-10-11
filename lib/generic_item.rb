@@ -1,6 +1,7 @@
 require 'update_methods'
 
-class GenericItem < UpdateMethods
+class GenericItem
+  include UpdateMethods
 
   def initialize(items)
     @generic_items = items.select { |i| is_generic?(i) }

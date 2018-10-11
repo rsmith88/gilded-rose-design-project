@@ -1,6 +1,7 @@
 require 'update_methods'
 
-class BackstagePasses < UpdateMethods
+class BackstagePasses
+  include UpdateMethods
 
   def initialize(items)
     @backstage_passes = items.select { |i| i.name.include? "Backstage passes" }
